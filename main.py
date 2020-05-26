@@ -3,6 +3,8 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from validation import VAlIDATEUIRENDERING
+from RealTimeDashBoardTesting import RealTimeDashboardValidation
 
 # find the element with explicit wait and click on it
 def Click(xpath):
@@ -28,22 +30,32 @@ Click("/html/body/div[3]/div[2]/h1/div/button/i")
 Click('//*[@id="channels"]/div/div[7]/div[2]/div/div[3]/p/span[2]/label/span')
 Click('//*[@id="channels"]/div/div[2]/div[2]/div/div[2]/p/span[2]/label/span')
 Click('//*[@id="apply"]')
+time.sleep(10)
+print("validating")
+VAlIDATEUIRENDERING(driver)
+
 
 # select yesterday as date range and check validation
 Click('//*[@id="reportrange"]')
 Click("/html/body/div[4]/div[1]/ul/li[1]")
+VAlIDATEUIRENDERING(driver)
+
+# Realtime dashboard 
+Click('/html/body/div[1]/nav/ul/li[3]/a')
+Click('/html/body/div[1]/nav/ul/li[3]/ul/li[1]/a/i')
+RealTimeDashboardValidation(driver)
 
 
 
-# custom report
+# # custom report
 
-Click("/html/body/div[1]/nav/ul/li[4]/a")
-Click('//*[@id="rlItmAESEAnIBU4xD353ux_4P"]/div[1]/div/a')
-# Click("/html/body/div[3]/div/div[2]/div/a[1]")
-time.sleep(5)
-Click("/html/body/div[3]/div/div[2]/div/a[2]")
-time.sleep(5)
-Click("/html/body/div[3]/div[2]/div/div/button[3]")
+# Click("/html/body/div[1]/nav/ul/li[4]/a")
+# Click('//*[@id="rlItmAESEAnIBU4xD353ux_4P"]/div[1]/div/a')
+# # Click("/html/body/div[3]/div/div[2]/div/a[1]")
+# time.sleep(10)
+# Click("/html/body/div[3]/div/div[2]/div/a[2]")
+# time.sleep(10)
+# Click("/html/body/div[3]/div[2]/div/div/button[3]")
 time.sleep(10)
 print("done")
 driver.close()
