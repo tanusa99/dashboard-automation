@@ -6,14 +6,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 #function to get the text of the given element xpath    
-def GetTextValue(xpath):    
+def GetTextValue(xpath):   
+    driver = webdriver.Firefox(executable_path="/home/tanusha/Desktop/selenium/geckodriver") 
     element = WebDriverWait(driver,40).until(
     EC.presence_of_element_located((By.XPATH,xpath))
     )
     return element.text
-
-
-
 #function to get the validation of a string containing number is zero or nonzero    
 def HeaderValidationHelper(str1):
     numvalue=""
@@ -158,10 +156,6 @@ def AVERAGELOADTIMEValidation():
           if HeaderValidationHelper(text[1])==False:
               print(text[0]+"value is shown 0 on ui")
               sys.exit()
-        
-
-
-
 def Validation():
     HeaderValidation()
     ADAndVIDEODISTRIBUTION()
