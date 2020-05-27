@@ -3226,3 +3226,14 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 JavaScript error: https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js, line 1: SyntaxError: export declarations may only appear at top level of a module
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 1590565765958	Marionette	INFO	Stopped listening on port 36855
+1590568594839	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.kWQMJH3R16rl"
+1590568595934	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1590568597313	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1590568597313	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1590568597313	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1590568597314	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1590568600966	Marionette	INFO	Listening on port 40223
+1590568600984	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js, line 1: SyntaxError: export declarations may only appear at top level of a module
+JavaScript error: https://files.codepedia.info/files/uploads/iScripts/html2canvas.js, line 53: TypeError: document.querySelector(...) is null
+1590568820644	Marionette	INFO	Stopped listening on port 40223

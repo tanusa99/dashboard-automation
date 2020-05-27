@@ -1,13 +1,8 @@
-import sys
-import time
-import requests
 from selenium import webdriver
 import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from validation import VAlIDATEUIRENDERING
-from RealTimeDashBoardTesting import RealTimeDashboardValidation
 from selenium.common.exceptions import NoSuchElementException
 def Allmedia(driver):
     def GetTextValue(xpath):   
@@ -67,3 +62,4 @@ def Allmedia(driver):
         print("Graph not found")
     driver.switch_to_default_content()
     Click('//*[@id="ccll"]/span')
+    print("All media validation done")
