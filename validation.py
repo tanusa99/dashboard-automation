@@ -4,26 +4,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-#function to get the text of the given element xpath    
-def GetTextValue(xpath):   
-    driver = webdriver.Firefox(executable_path="/home/tanusha/Desktop/selenium/geckodriver") 
-    element = WebDriverWait(driver,40).until(
-    EC.presence_of_element_located((By.XPATH,xpath))
-    )
-    return element.text
-#function to get the validation of a string containing number is zero or nonzero    
-def HeaderValidationHelper(str1):
-    numvalue=""
-    for i in  range(len(str1)):
-        t=str1[i].isalpha()
-        if t==False:
-            numvalue=numvalue+str1[i]
-    num=float(numvalue)
-    if num==0.0:
-        return False
-    else:
-        return True
-
 def VAlIDATEUIRENDERING(driver):
 
 
